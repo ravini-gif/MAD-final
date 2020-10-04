@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Blood Care</string>
+    <string name="blood_care">Blood Care</string>
+    <string name="user_name">User Name</string>
+    <string name="email">Email</string>
+    <string name="contact_no">Contact No</string>
+    <string name="city">City</string>
+    <string name="gender">Gender</string>
+    <string name="search_don">Search Donaters</string>
+    <string name="submit">Submit</string>
+    <string name="search">Search</string>
+    <string name="update">Update</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="login">login</string>
+    <string name="register_msg">Not registerd yet? Register Now</string>
+    <string name="add_fund_details">Add Fund Details</string>
+    <string name="deposited_bank">Deposited Bank</string>
+    <string name="depositor_s_name">Depositor\'s Name</string>
+    <string name="add_h_details">Add Hospital Details</string>
+    <string name="add_details">Add Details</string>
+    <string name="edit_theme_view">Edit Theme View</string>
+
+</resources>
