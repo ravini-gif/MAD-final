@@ -25,13 +25,13 @@ public class database_helper extends SQLiteOpenHelper {
         DB.execSQL("drop table if exists HDetails");
     }
 
-    public Boolean insertquestion(String hname, String question, String answer) {
+    public Boolean insertHospital(String hid, String hname, String email) {
 
         SQLiteDatabase DB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("hid", hname);
-        contentValues.put("hName ", question);
-        contentValues.put(" email ", answer);
+        contentValues.put("hid", hid);
+        contentValues.put("hName ", hname);
+        contentValues.put(" email ", email);
         long result = DB.insert(" HDetails", null, contentValues);
         if (result == -1) {
             return false;
@@ -41,17 +41,17 @@ public class database_helper extends SQLiteOpenHelper {
 
     }
 
-    public Boolean updatequestion(String hname, String question, String answer) {
+    public Boolean updateHospital(String hid, String hname, String email) {
 
         SQLiteDatabase DB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("hid", hname);
-        contentValues.put("hName ", question);
-        contentValues.put(" email ", answer);
-        Cursor cursor = DB.rawQuery("Select * from HDetails where hid = ?", new String[]{hname});
+        contentValues.put("hid", hid);
+        contentValues.put("hName ", hname);
+        contentValues.put(" email ", email);
+        Cursor cursor = DB.rawQuery("Select * from HDetails where hid = ?", new String[]{ hid});
         if (cursor.getCount() > 0) {
 
-            long result = DB.update("HDetails", contentValues, "hid=?", new String[]{hname});
+            long result = DB.update("HDetails", contentValues, "hid=?", new String[]{ hid});
             if (result == -1) {
                 return false;
             } else {
@@ -63,7 +63,7 @@ public class database_helper extends SQLiteOpenHelper {
 
     }
 
-    public Boolean deletequestion(String hid) {
+    public Boolean deleteHospital(String hid) {
 
         SQLiteDatabase DB = this.getWritableDatabase();
 

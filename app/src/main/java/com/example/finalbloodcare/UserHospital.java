@@ -36,14 +36,16 @@ public class UserHospital extends AppCompatActivity {
                 }
                 StringBuffer buffer = new StringBuffer();
                 while (res.moveToNext()) {
-                    buffer.append("Question Number :" + res.getString(0) + "\n");
-                    buffer.append("Question :" + res.getString(1) + "\n");
-                    buffer.append("Answer :" + res.getString(2) + "\n");
+                    buffer.append("Hospital id :" + res.getString(0) + "\n");
+                    buffer.append("Hospital Name :" + res.getString(1) + "\n");
+                    buffer.append("Hospital Email :" + res.getString(2) + "\n");
+                    buffer.append("\n");
+
                 }
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(UserHospital.this);
                 builder.setCancelable(true);
-                builder.setTitle("Question Entries");
+                builder.setTitle("Hospital Details");
                 builder.setMessage(buffer.toString());
                 builder.show();
 

@@ -37,12 +37,12 @@ public class CrudHospital extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
 
-                    String qnumTXT = hid.getText().toString();
-                    String questionTXT = email.getText().toString();
-                    String answerTXT = hname.getText().toString();
+                    String hidTXT = hid.getText().toString();
+                    String  emailTXT = email.getText().toString();
+                    String  hnameTXT = hname.getText().toString();
 
-                    Boolean checkinsertquestion = DB.insertquestion(qnumTXT,questionTXT, answerTXT);
-                    if(checkinsertquestion==true)
+                    Boolean checkinsertHospital = DB.insertHospital(hidTXT,emailTXT,  hnameTXT);
+                    if(checkinsertHospital==true)
                         Toast.makeText(CrudHospital.this,"New Entry Inserted",Toast.LENGTH_SHORT).show();
                     else
                         Toast.makeText(CrudHospital.this,"New Entry Not Inserted",Toast.LENGTH_SHORT).show();
@@ -55,14 +55,14 @@ public class CrudHospital extends AppCompatActivity {
             updateh.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    String hidTXT = hid.getText().toString();
+                    String  emailTXT = email.getText().toString();
+                    String  hnameTXT = hname.getText().toString();
 
-                    String qnumTXT =hid.getText().toString();
-                    String questionTXT = email.getText().toString();
-                    String answerTXT = hname.getText().toString();
 
 
-                    Boolean checkupdatequestion = DB.updatequestion(qnumTXT, questionTXT, answerTXT);
-                    if(checkupdatequestion==true)
+                    Boolean checkupdateHospital = DB.updateHospital(hidTXT, emailTXT,hnameTXT);
+                    if(checkupdateHospital==true)
                         Toast.makeText(CrudHospital.this,"Entry Updated",Toast.LENGTH_SHORT).show();
                     else
                         Toast.makeText(CrudHospital.this,"New Entry Not Updated",Toast.LENGTH_SHORT).show();
@@ -78,8 +78,8 @@ public class CrudHospital extends AppCompatActivity {
 
                     String qnumTXT = hid.getText().toString();
 
-                    Boolean checkdeletequestion = DB.deletequestion(qnumTXT);
-                    if(checkdeletequestion==true)
+                    Boolean checkdeleteHospital = DB.deleteHospital(qnumTXT);
+                    if(checkdeleteHospital==true)
                         Toast.makeText(CrudHospital.this,"Entry Deleted",Toast.LENGTH_SHORT).show();
                     else
                         Toast.makeText(CrudHospital.this,"New Entry Not Deleted",Toast.LENGTH_SHORT).show();
@@ -101,9 +101,7 @@ public class CrudHospital extends AppCompatActivity {
                         buffer.append("Hospital id :"+res.getString(0)+"\n");
                         buffer.append("Hospital Name :"+res.getString(1)+"\n");
                         buffer.append("Hospital email :"+res.getString(2)+"\n");
-                        buffer.append("");
-                   System.out.println("");
-                        buffer.append("");
+                        buffer.append("\n");
                     }
 
                     AlertDialog.Builder builder = new AlertDialog.Builder(CrudHospital.this);

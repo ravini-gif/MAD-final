@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class admin_menu extends AppCompatActivity {
 
-    Button m_hos,m_fund,m_event, manage_faq;
+    Button m_hos,m_fund,m_event, manage_faq,m_bgroup;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +19,7 @@ public class admin_menu extends AppCompatActivity {
         m_fund = findViewById(R.id.manage_fund);
         m_event=findViewById(R.id.event);
         manage_faq = findViewById(R.id.manage_faq);
+        m_bgroup = findViewById(R.id.manage_bGroup);
 
         m_hos.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +46,12 @@ public class admin_menu extends AppCompatActivity {
                 openActivity4();
             }
         });
+        m_bgroup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivity5();
+            }
+        });
     }
 
     public void openActivity(){
@@ -63,6 +70,11 @@ public class admin_menu extends AppCompatActivity {
 
     public void openActivity4(){
         Intent intent=new Intent(admin_menu.this,question.class);
+        startActivity(intent);
+    }
+
+    public void openActivity5(){
+        Intent intent=new Intent(admin_menu.this,BloodBank.class);
         startActivity(intent);
     }
 }

@@ -37,14 +37,15 @@ public class user_quetion extends AppCompatActivity {
                 }
                 StringBuffer buffer = new StringBuffer();
                 while (res.moveToNext()) {
-                    buffer.append("Hospital id :" + res.getString(0) + "\n");
-                    buffer.append("Hospital Name :" + res.getString(1) + "\n");
-                    buffer.append("Hospital Email :" + res.getString(2) + "\n");
+                    buffer.append("Question Number :" + res.getString(0) + "\n");
+                    buffer.append("Question :" + res.getString(1) + "\n");
+                    buffer.append("Answer :" + res.getString(2) + "\n");
                 }
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(user_quetion.this);
                 builder.setCancelable(true);
-                builder.setTitle("Hospital Details");
+
+                builder.setTitle("Question Entries");
                 builder.setMessage(buffer.toString());
                 builder.show();
 
