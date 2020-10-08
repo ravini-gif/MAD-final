@@ -86,7 +86,7 @@ public class MenuList extends AppCompatActivity {
     }
 */
    public void openAdd_h_details(){
-      Intent intent = new Intent(this,Add_h_details.class);
+      Intent intent = new Intent(this,UserHospital.class);
         startActivity(intent);
     }
 
@@ -101,7 +101,7 @@ public class MenuList extends AppCompatActivity {
     }
 */
     public void openquestion(){
-        Intent intent = new Intent(this,question.class);
+        Intent intent = new Intent(this,user_quetion.class);
         startActivity(intent);
     }
 

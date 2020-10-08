@@ -9,15 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Account_details"></activity>
-        <activity android:name=".Fund_calculation" >
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".UserHospital"></activity>
+        <activity android:name=".CrudHospital" />
+        <activity android:name=".user_quetion" />
+        <activity android:name=".Account_details" />
+        <activity android:name=".Fund_calculation" />
         <activity android:name=".read_event_details" />
         <activity android:name=".Edit_event_details" />
         <activity android:name=".Add_event" />
@@ -25,23 +21,21 @@
         <activity android:name=".my_row" />
         <activity android:name=".Edit_h_details" />
         <activity android:name=".read_hos_data" />
-        <activity android:name=".Add_h_details" >
-
-
-        </activity>
-        <activity android:name=".AddActivity" >
-
-
-        </activity>
+        <activity android:name=".Add_h_details" />
+        <activity android:name=".AddActivity" />
         <activity android:name=".Fund" />
         <activity android:name=".question" />
-        <activity android:name=".donate" >
-
-        </activity>
+        <activity android:name=".donate" />
         <activity android:name=".MenuList" />
         <activity android:name=".register" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

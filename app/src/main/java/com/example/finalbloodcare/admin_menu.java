@@ -48,7 +48,7 @@ public class admin_menu extends AppCompatActivity {
     }
 
     public void openActivity(){
-        Intent intent=new Intent(admin_menu.this,Add_h_details.class);
+        Intent intent=new Intent(admin_menu.this,CrudHospital.class);
         startActivity(intent);
     }
 
