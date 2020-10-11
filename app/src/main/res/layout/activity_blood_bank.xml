@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fund">
+    tools:context=".BloodBank">
 
     <TextView
-        android:id="@+id/fund"
+        android:id="@+id/Bloodb"
         android:layout_width="312dp"
         android:layout_height="50dp"
         android:gravity="center_horizontal"
-        android:text="FUND"
+        android:text="Edit BloodStock"
         android:textAlignment="center"
         android:textColor="@color/pink"
         android:textSize="40sp"
@@ -24,10 +24,10 @@
         app:layout_constraintVertical_bias="0.14" />
 
     <EditText
-        android:id="@+id/fnum"
+        android:id="@+id/bid"
         android:layout_width="312dp"
         android:layout_height="50dp"
-        android:hint="Enter fund Id"
+        android:hint="Enter BloodGroup id"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -36,10 +36,10 @@
         app:layout_constraintVertical_bias="0.27" />
 
     <EditText
-        android:id="@+id/bank"
+        android:id="@+id/btype"
         android:layout_width="312dp"
         android:layout_height="50dp"
-        android:hint="Enter Bank Name"
+        android:hint="Enter BloodType"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -48,9 +48,8 @@
         app:layout_constraintVertical_bias="0.365" />
 
 
-
     <Button
-        android:id="@+id/addf"
+        android:id="@+id/addb"
         android:layout_width="312dp"
         android:layout_height="50dp"
         android:background="@color/pink"
@@ -65,11 +64,11 @@
         app:layout_constraintVertical_bias="0.6" />
 
     <Button
-        android:id="@+id/viewf"
+        android:id="@+id/viewb"
         android:layout_width="312dp"
         android:layout_height="50dp"
         android:background="@color/pink"
-        android:text="View Fund Details"
+        android:text="View Blood Details"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -80,7 +79,7 @@
         app:layout_constraintVertical_bias="0.696" />
 
     <Button
-        android:id="@+id/updatef"
+        android:id="@+id/updateb"
         android:layout_width="312dp"
         android:layout_height="50dp"
         android:background="@color/pink"
@@ -96,7 +95,7 @@
         app:layout_constraintVertical_bias="0.794" />
 
     <Button
-        android:id="@+id/deletef"
+        android:id="@+id/deleteb"
         android:layout_width="312dp"
         android:layout_height="50dp"
         android:background="@color/pink"
@@ -111,16 +110,17 @@
         app:layout_constraintVertical_bias="0.889" />
 
     <EditText
-        android:id="@+id/amount"
+        android:id="@+id/bamount"
         android:layout_width="312dp"
         android:layout_height="50dp"
-        android:hint="Enter the amount"
+        android:ems="10"
+        android:hint="Enter available Blood amount"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.462" />
-
-
+        app:layout_constraintVertical_bias="0.468"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

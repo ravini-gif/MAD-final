@@ -47,7 +47,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
         holder.mainLayout.setOnClickListener(new android.view.View.OnClickListener() {
             @Override
             public void onClick(android.view.View view) {
-                Intent intent = new Intent(context, Edit_h_details.class);
+                Intent intent = new Intent(context, Edit_hospital.class);
                 intent.putExtra("id", String.valueOf(event_id.get(position)));
                 intent.putExtra("name", String.valueOf(event_name.get(position)));
                 intent.putExtra("mail", String.valueOf(location.get(position)));

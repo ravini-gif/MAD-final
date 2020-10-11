@@ -5,15 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center_horizontal"
-    tools:context=".read_hos_data">
-
+    android:layout_gravity="center_horizontal"
+    tools:context=".display_hospitals">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/recyclerView"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
-        tools:ignore="MissingConstraints"/>
+        tools:layout_editor_absoluteY="1dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

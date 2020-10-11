@@ -27,7 +27,7 @@ public class Add_event extends AppCompatActivity {
         eventadd = findViewById(R.id.eventadd);
         eventview = findViewById(R.id.eventview);
 
-        eventadd.setOnClickListener(new View.OnClickListener() {
+       /* eventadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 MyDatabaseHelper myDB = new MyDatabaseHelper(Add_event.this);
@@ -36,7 +36,7 @@ public class Add_event extends AppCompatActivity {
                         Integer.valueOf(eventdate.getText().toString().trim()),
                         Integer.valueOf(eventtime.getText().toString().trim()));
             }
-        });
+        });*/
 
         eventview.setOnClickListener(new View.OnClickListener() {
             @Override

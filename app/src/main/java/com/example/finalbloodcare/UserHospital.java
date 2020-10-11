@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class UserHospital extends AppCompatActivity {
     Button viewh;
-    database_helper DB;
+    MyDatabaseHelper DB;
 
 
     @Override
@@ -21,7 +21,7 @@ public class UserHospital extends AppCompatActivity {
         setContentView(R.layout.activity_user_hospital);
 
 
-        DB = new database_helper(this);
+        DB = new MyDatabaseHelper(this);
 
         viewh = findViewById(R.id.viewh);
 
@@ -29,7 +29,7 @@ public class UserHospital extends AppCompatActivity {
         viewh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Cursor res = DB.getdata();
+                Cursor res = DB.readAllData();
                 if (res.getCount() == 0) {
                     Toast.makeText(UserHospital.this, "No Entry Exists", Toast.LENGTH_SHORT).show();
                     return;
