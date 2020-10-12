@@ -56,8 +56,8 @@
         android:id="@+id/addbutton2"
         android:layout_width="312dp"
         android:layout_height="50dp"
-        android:background="@color/pink"
         android:layout_marginTop="156dp"
+        android:background="@color/pink"
 
         android:text="Add details"
         android:textAllCaps="false"

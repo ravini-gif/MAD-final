@@ -9,15 +9,17 @@ import android.widget.Button;
 
 public class admin_menu extends AppCompatActivity {
 
-    Button m_hos,m_fund,m_event, manage_faq,m_bgroup;
+    Button m_hos, m_fund, manage_faq, m_bgroup, fund_calculate;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_menu);
 
+
         m_hos = findViewById(R.id.manage_hos);
         m_fund = findViewById(R.id.manage_fund);
-        m_event=findViewById(R.id.event);
+        fund_calculate = findViewById(R.id.manage_fund_cal);
         manage_faq = findViewById(R.id.manage_faq);
         m_bgroup = findViewById(R.id.manage_bGroup);
 
@@ -33,13 +35,13 @@ public class admin_menu extends AppCompatActivity {
                 openActivity2();
             }
         });
-        m_event.setOnClickListener(new View.OnClickListener() {
+
+        fund_calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openActivity3();
+                openActivity6();
             }
         });
-
         manage_faq.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,27 +56,29 @@ public class admin_menu extends AppCompatActivity {
         });
     }
 
-    public void openActivity(){
-        Intent intent=new Intent(admin_menu.this,Add_hospital.class);
+    public void openActivity() {
+        Intent intent = new Intent(admin_menu.this, Add_hospital.class);
         startActivity(intent);
     }
 
-    public void openActivity2(){
-        Intent intent=new Intent(admin_menu.this,Fund.class);
-        startActivity(intent);
-    }
-    public void openActivity3(){
-        Intent intent=new Intent(admin_menu.this,Add_event.class);
+    public void openActivity2() {
+        Intent intent = new Intent(admin_menu.this, Fund.class);
         startActivity(intent);
     }
 
-    public void openActivity4(){
-        Intent intent=new Intent(admin_menu.this,question.class);
+
+    public void openActivity4() {
+        Intent intent = new Intent(admin_menu.this, question.class);
         startActivity(intent);
     }
 
-    public void openActivity5(){
-        Intent intent=new Intent(admin_menu.this,BloodBank.class);
+    public void openActivity5() {
+        Intent intent = new Intent(admin_menu.this, BloodBank.class);
+        startActivity(intent);
+    }
+
+    public void openActivity6() {
+        Intent intent = new Intent(admin_menu.this, FundCalculator.class);
         startActivity(intent);
     }
 }

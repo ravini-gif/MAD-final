@@ -26,11 +26,11 @@ public class FundDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String query = " CREATE TABLE "+ " TABLE_NAME " +
-                " ( " + " COLOMN_ID " +" INTEGER PRIMARY KEY AUTOINCREMENT," +
+        String query = " CREATE TABLE " + " TABLE_NAME " +
+                " ( " + " COLOMN_ID " + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                 " COLOMN_TITLE " + " TEXT, " +
                 " COLOMN_AMOUNT " + " FLOAT, " +
-                " COLOMN_BANK " + " TEXT ); " ;
+                " COLOMN_BANK " + " TEXT ); ";
         db.execSQL(query);
 
     }
@@ -41,7 +41,8 @@ public class FundDbHelper extends SQLiteOpenHelper {
         onCreate(db);
 
     }
-    void addFund(String title,float amount,String bank) {
+
+    void addFund(String title, float amount, String bank) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(COLOMN_TITLE, title);

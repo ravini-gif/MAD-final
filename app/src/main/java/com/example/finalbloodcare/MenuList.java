@@ -13,9 +13,7 @@ public class MenuList extends AppCompatActivity {
     private Button b_bank;
     private Button view_hos;
     private Button fund;
-    /* private Button u_event;
 
-     */
     private Button faq;
 
     @Override
@@ -58,15 +56,6 @@ public class MenuList extends AppCompatActivity {
                 openFund();
             }
         });
-/*
-        u_event = (Button) findViewById(R.id.button1);
-        u_event.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openregister();
-            }
-        });
-*/
         faq = (Button) findViewById(R.id.faq);
         faq.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,7 +84,7 @@ public class MenuList extends AppCompatActivity {
     }
 
     public void openFund() {
-        Intent intent = new Intent(this, Account_details.class);
+        Intent intent = new Intent(this, userFund.class);
         startActivity(intent);
     }
 

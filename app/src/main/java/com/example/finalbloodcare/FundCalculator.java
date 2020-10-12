@@ -1,6 +1,5 @@
 package com.example.finalbloodcare;
 
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -9,7 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class Fund_calculation extends AppCompatActivity {
+public class FundCalculator extends AppCompatActivity {
+
     private EditText boc;
     private EditText seylan;
     private EditText nsb;
@@ -20,7 +20,7 @@ public class Fund_calculation extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_fund_calculator);
 
         boc = findViewById(R.id.boc);
         seylan = findViewById(R.id.seylan);
@@ -33,20 +33,20 @@ public class Fund_calculation extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (boc.getText().toString().length() ==0) {
+                if (boc.getText().toString().length() == 0) {
                     boc.setText("0");
                 }
 
-                if (seylan.getText().toString().length() ==0) {
+                if (seylan.getText().toString().length() == 0) {
                     seylan.setText("0");
                 }
 
-                if (nsb.getText().toString().length() ==0) {
+                if (nsb.getText().toString().length() == 0) {
                     nsb.setText("0");
                 }
 
 
-                if (hnb.getText().toString().length() ==0) {
+                if (hnb.getText().toString().length() == 0) {
                     hnb.setText("0");
                 }
 

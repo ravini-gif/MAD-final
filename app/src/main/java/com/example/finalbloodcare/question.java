@@ -14,7 +14,7 @@ import java.sql.SQLClientInfoException;
 
 public class question extends AppCompatActivity {
 
-    EditText qnum,question, answer;
+    EditText qnum, question, answer;
     Button addq, viewq, updateq, deleteq;
     DatabaseHelper DB;
 
@@ -41,11 +41,11 @@ public class question extends AppCompatActivity {
                 String questionTXT = question.getText().toString();
                 String answerTXT = answer.getText().toString();
 
-                Boolean checkinsertquestion = DB.insertquestion(qnumTXT,questionTXT, answerTXT);
-                if(checkinsertquestion==true)
-                    Toast.makeText(question.this,"New Entry Inserted",Toast.LENGTH_SHORT).show();
+                Boolean checkinsertquestion = DB.insertquestion(qnumTXT, questionTXT, answerTXT);
+                if (checkinsertquestion == true)
+                    Toast.makeText(question.this, "New Entry Inserted", Toast.LENGTH_SHORT).show();
                 else
-                    Toast.makeText(question.this,"New Entry Not Inserted",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(question.this, "New Entry Not Inserted", Toast.LENGTH_SHORT).show();
 
 
             }
@@ -62,10 +62,10 @@ public class question extends AppCompatActivity {
 
 
                 Boolean checkupdatequestion = DB.updatequestion(qnumTXT, questionTXT, answerTXT);
-                if(checkupdatequestion==true)
-                    Toast.makeText(question.this,"Entry Updated",Toast.LENGTH_SHORT).show();
+                if (checkupdatequestion == true)
+                    Toast.makeText(question.this, "Entry Updated", Toast.LENGTH_SHORT).show();
                 else
-                    Toast.makeText(question.this,"New Entry Not Updated",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(question.this, "New Entry Not Updated", Toast.LENGTH_SHORT).show();
 
 
             }
@@ -79,10 +79,10 @@ public class question extends AppCompatActivity {
                 String qnumTXT = qnum.getText().toString();
 
                 Boolean checkdeletequestion = DB.deletequestion(qnumTXT);
-                if(checkdeletequestion==true)
-                    Toast.makeText(question.this,"Entry Deleted",Toast.LENGTH_SHORT).show();
+                if (checkdeletequestion == true)
+                    Toast.makeText(question.this, "Entry Deleted", Toast.LENGTH_SHORT).show();
                 else
-                    Toast.makeText(question.this,"New Entry Not Deleted",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(question.this, "New Entry Not Deleted", Toast.LENGTH_SHORT).show();
 
 
             }
@@ -92,15 +92,15 @@ public class question extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Cursor res = DB.getdata();
-                if(res.getCount()==0) {
-                    Toast.makeText(question.this,"No Entry Exists",Toast.LENGTH_SHORT).show();
+                if (res.getCount() == 0) {
+                    Toast.makeText(question.this, "No Entry Exists", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 StringBuffer buffer = new StringBuffer();
-                while(res.moveToNext()){
-                    buffer.append("Question Number :"+res.getString(0)+"\n");
-                    buffer.append("Question :"+res.getString(1)+"\n");
-                    buffer.append("Answer :"+res.getString(2)+"\n");
+                while (res.moveToNext()) {
+                    buffer.append("Question Number :" + res.getString(0) + "\n");
+                    buffer.append("Question :" + res.getString(1) + "\n");
+                    buffer.append("Answer :" + res.getString(2) + "\n");
                 }
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(question.this);

@@ -48,10 +48,10 @@ public class database_helper extends SQLiteOpenHelper {
         contentValues.put("hid", hid);
         contentValues.put("hName ", hname);
         contentValues.put(" email ", email);
-        Cursor cursor = DB.rawQuery("Select * from HDetails where hid = ?", new String[]{ hid});
+        Cursor cursor = DB.rawQuery("Select * from HDetails where hid = ?", new String[]{hid});
         if (cursor.getCount() > 0) {
 
-            long result = DB.update("HDetails", contentValues, "hid=?", new String[]{ hid});
+            long result = DB.update("HDetails", contentValues, "hid=?", new String[]{hid});
             if (result == -1) {
                 return false;
             } else {
@@ -70,7 +70,7 @@ public class database_helper extends SQLiteOpenHelper {
         Cursor cursor = DB.rawQuery("Select * from HDetails where hid= ?", new String[]{hid});
         if (cursor.getCount() > 0) {
 
-            long result = DB.delete("HDetails", "hid=?",new String[]{hid});
+            long result = DB.delete("HDetails", "hid=?", new String[]{hid});
             if (result == -1) {
                 return false;
             } else {

@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     EditText username, password;
     Button btnlogin;
     DBHelper DB;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,10 +62,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         TextView textView = findViewById(R.id.txt_register);
-        String text= "Not registerd yet? Register Now";
+        String text = "Not registerd yet? Register Now";
 
         SpannableString ss = new SpannableString(text);
-        ClickableSpan clickableSpan= new ClickableSpan() {
+        ClickableSpan clickableSpan = new ClickableSpan() {
             @Override
             public void onClick(@NonNull View view) {
                 openActivity();
@@ -77,12 +78,13 @@ public class MainActivity extends AppCompatActivity {
 
             }
         };
-        ss.setSpan(clickableSpan, 19,31, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ss.setSpan(clickableSpan, 19, 31, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         textView.setText(ss);
         textView.setMovementMethod(LinkMovementMethod.getInstance());
     }
-    public void openActivity(){
-        Intent intent=new Intent(MainActivity.this,register.class);
+
+    public void openActivity() {
+        Intent intent = new Intent(MainActivity.this, register.class);
         startActivity(intent);
     }
 }

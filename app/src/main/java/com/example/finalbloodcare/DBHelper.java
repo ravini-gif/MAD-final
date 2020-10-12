@@ -12,7 +12,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public static final String DBNAME = "Login.db";
 
-    public DBHelper( Context context) {
+    public DBHelper(Context context) {
         super(context, "Login.db", null, 1);
     }
 
@@ -32,26 +32,26 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put("username", username);
         contentValues.put("email", email);
 
-        long result = MyDB.insert("users",null,contentValues);
-        if(result==-1) return false;
+        long result = MyDB.insert("users", null, contentValues);
+        if (result == -1) return false;
         else
             return true;
 
     }
 
-    public Boolean checkusername(String username){
+    public Boolean checkusername(String username) {
         SQLiteDatabase MyDB = this.getWritableDatabase();
-        Cursor cursor = MyDB.rawQuery("Select * from users where username = ?", new String[] {username});
-        if(cursor.getCount()>0)
+        Cursor cursor = MyDB.rawQuery("Select * from users where username = ?", new String[]{username});
+        if (cursor.getCount() > 0)
             return true;
         else
             return false;
     }
 
-    public Boolean checkusernamepassword(String username, String password){
+    public Boolean checkusernamepassword(String username, String password) {
         SQLiteDatabase MyDB = this.getWritableDatabase();
-        Cursor cursor =MyDB.rawQuery("Select * from users where username = ? and password = ?", new String[] {username,password});
-        if (cursor.getCount()>0)
+        Cursor cursor = MyDB.rawQuery("Select * from users where username = ? and password = ?", new String[]{username, password});
+        if (cursor.getCount() > 0)
             return true;
         else
             return false;

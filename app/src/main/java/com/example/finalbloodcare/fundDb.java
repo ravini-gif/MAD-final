@@ -29,7 +29,7 @@ public class fundDb extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
         contentValues.put("fnum", fnum);
         contentValues.put("bank", bank);
-        contentValues.put("dAmount",  Famount);
+        contentValues.put("dAmount", Famount);
         long result = DB.insert("FundDetails", null, contentValues);
         if (result == -1) {
             return false;
@@ -45,7 +45,7 @@ public class fundDb extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
         contentValues.put("fnum", fnum);
         contentValues.put("bank", bank);
-        contentValues.put("dAmount",  Famount);
+        contentValues.put("dAmount", Famount);
         Cursor cursor = DB.rawQuery("Select * from FundDetails where fnum = ?", new String[]{fnum});
         if (cursor.getCount() > 0) {
 
@@ -68,7 +68,7 @@ public class fundDb extends SQLiteOpenHelper {
         Cursor cursor = DB.rawQuery("Select * from FundDetails where fnum = ?", new String[]{fnum});
         if (cursor.getCount() > 0) {
 
-            long result = DB.delete("FundDetails", "fnum=?",new String[]{fnum});
+            long result = DB.delete("FundDetails", "fnum=?", new String[]{fnum});
             if (result == -1) {
                 return false;
             } else {

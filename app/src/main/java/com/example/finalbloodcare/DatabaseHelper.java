@@ -71,7 +71,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor = DB.rawQuery("Select * from Questiondetails where qnum = ?", new String[]{qnum});
         if (cursor.getCount() > 0) {
 
-            long result = DB.delete("Questiondetails", "qnum=?",new String[]{qnum});
+            long result = DB.delete("Questiondetails", "qnum=?", new String[]{qnum});
             if (result == -1) {
                 return false;
             } else {

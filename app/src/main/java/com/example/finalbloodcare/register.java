@@ -28,8 +28,8 @@ public class register extends AppCompatActivity {
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.password);
         repassword = (EditText) findViewById(R.id.repassword);
-        submit =(Button) findViewById(R.id.submit);
-        submit2 =(Button) findViewById(R.id.submit2);
+        submit = (Button) findViewById(R.id.submit);
+        submit2 = (Button) findViewById(R.id.submit2);
         DB = new DBHelper(this);
 
         submit.setOnClickListener(new OnClickListener() {
@@ -41,27 +41,26 @@ public class register extends AppCompatActivity {
                 String repass = repassword.getText().toString();
 
 
-                if(user.equals("") || emle.equals("") || pass.equals("") || repass.equals(""))
-                    Toast.makeText(register.this, "Please enter all the fields." ,Toast.LENGTH_SHORT).show();
-                else{
-                    if(pass.equals(repass)){
+                if (user.equals("") || emle.equals("") || pass.equals("") || repass.equals(""))
+                    Toast.makeText(register.this, "Please enter all the fields.", Toast.LENGTH_SHORT).show();
+                else {
+                    if (pass.equals(repass)) {
                         Boolean checkuser = DB.checkusername(user);
-                        if(checkuser==false){
+                        if (checkuser == false) {
                             Boolean insert = DB.insertData(user, pass);
-                            if(insert==true){
-                                Toast.makeText(register.this,"Register Successfully!" ,Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(getApplicationContext(),MenuList.class);
+                            if (insert == true) {
+                                Toast.makeText(register.this, "Register Successfully!", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(getApplicationContext(), MenuList.class);
                                 startActivity(intent);
-                            }else{
-                                Toast.makeText(register.this, "Registration Failed !" ,Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(register.this, "Registration Failed !", Toast.LENGTH_SHORT).show();
 
                             }
+                        } else {
+                            Toast.makeText(register.this, " User already exists! Please Sign In", Toast.LENGTH_SHORT).show();
                         }
-                        else{
-                            Toast.makeText(register.this, " User already exists! Please Sign In" ,Toast.LENGTH_SHORT).show();
-                        }
-                    }else{
-                        Toast.makeText(register.this, "Password not matching !" ,Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(register.this, "Password not matching !", Toast.LENGTH_SHORT).show();
                     }
                 }
 
@@ -73,7 +72,7 @@ public class register extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
         });

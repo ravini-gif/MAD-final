@@ -30,7 +30,7 @@ public class Data_BaseHelperr extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
         contentValues.put("bid ", bnum);
         contentValues.put(" Btype ", btype);
-        contentValues.put("Bamount",bamount);
+        contentValues.put("Bamount", bamount);
         long result = DB.insert("BloodDetails", null, contentValues);
         if (result == -1) {
             return false;
@@ -46,7 +46,7 @@ public class Data_BaseHelperr extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
         contentValues.put("bid ", bnum);
         contentValues.put(" Btype ", btype);
-        contentValues.put("Bamount",bamount);
+        contentValues.put("Bamount", bamount);
         Cursor cursor = DB.rawQuery("Select * from BloodDetails where bid = ?", new String[]{bnum});
         if (cursor.getCount() > 0) {
 
@@ -69,7 +69,7 @@ public class Data_BaseHelperr extends SQLiteOpenHelper {
         Cursor cursor = DB.rawQuery("Select * from BloodDetails where bid = ?", new String[]{bnum});
         if (cursor.getCount() > 0) {
 
-            long result = DB.delete("BloodDetails", "bid=?",new String[]{bnum});
+            long result = DB.delete("BloodDetails", "bid=?", new String[]{bnum});
             if (result == -1) {
                 return false;
             } else {

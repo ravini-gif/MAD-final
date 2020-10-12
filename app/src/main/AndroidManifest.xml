@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Edit_hospital"></activity>
+        <activity android:name=".FundCalculator"></activity>
+        <activity android:name=".userFund" />
+        <activity android:name=".Edit_hospital" />
         <activity android:name=".display_hospitals" />
         <activity android:name=".Add_hospital" />
         <activity android:name=".User_Bloodbank" />
@@ -18,10 +20,6 @@
         <activity android:name=".CrudHospital" />
         <activity android:name=".user_quetion" />
         <activity android:name=".Account_details" />
-        <activity android:name=".Fund_calculation" />
-        <activity android:name=".read_event_details" />
-        <activity android:name=".Edit_event_details" />
-        <activity android:name=".Add_event" />
         <activity android:name=".admin_menu" />
         <activity android:name=".my_row" />
         <activity android:name=".AddActivity" />

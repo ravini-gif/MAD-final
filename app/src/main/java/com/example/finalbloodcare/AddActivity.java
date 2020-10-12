@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class AddActivity extends AppCompatActivity {
-    EditText title_input,amount_input,bank_input;
+    EditText title_input, amount_input, bank_input;
     Button addbutton2;
 
     @Override
@@ -29,7 +29,7 @@ public class AddActivity extends AppCompatActivity {
                         bank_input.getText().toString().trim());
             }
 
-        }  );
+        });
 
     }
 }
