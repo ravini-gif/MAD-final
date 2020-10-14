@@ -34,14 +34,14 @@ import static org.hamcrest.Matchers.is;
 public class Add_h_detailsTest {
 
     @Rule
-    public ActivityTestRule<Add_h_details> mActivityTestRule = new ActivityTestRule<>(Add_h_details.class);
+    public ActivityTestRule<Add_h_details> mActivityTestRule = new ActivityTestRule<>(Add_hospital.class);
 
     @Test
     public void add_h_detailsTest() {
         ViewInteraction appCompatEditText = onView(
                 allOf(withId(R.id.name_input),
                         childAtPosition(
-                                allOf(withId(R.id.add_details_layout),
+                                allOf(withId(R.id.add_content),
                                         childAtPosition(
                                                 withClassName(is("androidx.constraintlayout.widget.ConstraintLayout")),
                                                 4)),
@@ -50,9 +50,9 @@ public class Add_h_detailsTest {
         appCompatEditText.perform(replaceText("hemas"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText2 = onView(
-                allOf(withId(R.id.email_input),
+                allOf(withId(R.id.district_input),
                         childAtPosition(
-                                allOf(withId(R.id.add_details_layout),
+                                allOf(withId(R.id.content),
                                         childAtPosition(
                                                 withClassName(is("androidx.constraintlayout.widget.ConstraintLayout")),
                                                 4)),
@@ -65,7 +65,7 @@ public class Add_h_detailsTest {
         ViewInteraction appCompatEditText3 = onView(
                 allOf(withId(R.id.phone_input),
                         childAtPosition(
-                                allOf(withId(R.id.add_details_layout),
+                                allOf(withId(R.id.contentt),
                                         childAtPosition(
                                                 withClassName(is("androidx.constraintlayout.widget.ConstraintLayout")),
                                                 4)),
